@@ -1,0 +1,11 @@
+# WordPress の認証情報（DBパスワード・認証キー）
+wp-config.php
+
+# WooCommerce / Stripe のログ（顧客・決済情報を含む可能性あり）
+**/wp-content/uploads/wc-logs/
+*.log
+
+# OS ファイル
+Thumbs.db
+desktop.ini
+.DS_Store
