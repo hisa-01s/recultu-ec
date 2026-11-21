@@ -40,3 +40,129 @@
 .portrait{display:inline-block;width:60px;height:70px;line-height:70px;background:#d8ccb0;border-radius:50%;font-size:11px}
 .bill-amt{font-weight:700;letter-spacing:.05em}
 .sample p,.noshi p,.nakabukuro p{margin:0}
+
+/* ==========================================================
+   記事本文の装飾（参考：MUK ONLINE SHOP 特集記事 wp-edit.css）
+   ヘッダー・ナビ・フッター・計測タグには影響させないため、
+   すべて .article .entry-content 配下に限定する。
+   ========================================================== */
+.article .entry-content{
+  --muk-text:#1a1a1a;
+  --muk-sub:#7e7e7e;
+  --muk-line:#c6c6c6;
+  --muk-bg:#f8f8f8;
+  color:var(--muk-text);
+  font-family:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic",sans-serif;
+  font-weight:500;
+  letter-spacing:.02em;
+  line-height:2;
+}
+.article .entry-content p{font-size:14px;line-height:2.14;margin:0}
+.article .entry-content p + p{margin-top:15px}
+.article .entry-content strong{font-weight:700}
+.article .entry-content a{color:var(--muk-text);text-decoration:underline}
+.article .entry-content a:hover{text-decoration:none;opacity:.7}
+
+/* 見出し：h2 = 下線（参考ページのセクション見出し）、h3 = 左に短い横線 */
+.article .entry-content h2{
+  margin:50px 0 30px;padding:0 0 15px;
+  background:none;border:none;border-bottom:1px solid currentColor;border-radius:0;
+  color:var(--muk-text);font-size:18px;font-weight:700;letter-spacing:.08em;line-height:1.6;
+}
+.article .entry-content h2::before,.article .entry-content h2::after{content:none}
+.article .entry-content h3{
+  position:relative;margin:40px 0 20px;padding:0 0 0 28px;
+  background:none;border:none;border-radius:0;
+  color:var(--muk-text);font-size:16px;font-weight:700;letter-spacing:.08em;line-height:1.5;
+}
+.article .entry-content h3::after{content:none}
+.article .entry-content h3::before{
+  content:"";position:absolute;left:0;top:.75em;width:13px;height:1px;
+  background-color:currentColor;border:none;
+}
+
+/* 目次：グレー地＋黒いピル型タイトル＋チェックアイコン */
+.article .entry-content .toc{
+  display:block;width:auto;max-width:1000px;margin:40px auto 60px;padding:40px;
+  background:#f2f2f2;border:1px solid #f2f2f2;border-radius:4px;
+  font-size:15px;line-height:1.5;
+}
+.article .entry-content .toc-content{border-top:none;padding:0}
+.article .entry-content .toc-title{
+  display:flex;justify-content:center;align-items:center;
+  width:100%;max-width:300px;margin:0 auto 40px;padding:10px 0;
+  background:var(--muk-text);color:#fff;border-radius:50vh;
+  font-size:15px;font-weight:700;line-height:1.5;text-align:center;
+}
+.article .entry-content .toc-title::after{color:#fff}
+.article .entry-content .toc .toc-list{margin:0;padding:0;list-style:none;text-align:left}
+.article .entry-content .toc .toc-list > li{margin:0;padding:0;list-style:none}
+.article .entry-content .toc .toc-list > li::before{content:none}
+.article .entry-content .toc .toc-list > li + li{margin-top:15px}
+.article .entry-content .toc a{
+  display:inline-block;padding-left:1.5em;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.226 9.043'%3E%3Cpath d='M4.204 9.043 0 4.843l1.414-1.414 2.724 2.723L9.749.004l1.477 1.348Z' fill='%231a1a1a'/%3E%3C/svg%3E") 0 center/11px auto no-repeat;
+  color:#444;font-weight:700;text-decoration:none;
+}
+.article .entry-content .toc a:hover{text-decoration:none;opacity:.7}
+
+/* リスト */
+.article .entry-content ul.wp-block-list,
+.article .entry-content ol.wp-block-list{margin:20px 0;padding-left:1.5em}
+.article .entry-content ul.wp-block-list > li,
+.article .entry-content ol.wp-block-list > li{font-size:14px;line-height:1.95;margin:0}
+.article .entry-content ul.wp-block-list > li + li,
+.article .entry-content ol.wp-block-list > li + li{margin-top:8px}
+.article .entry-content ul.wp-block-list{list-style:none;padding-left:0}
+.article .entry-content ul.wp-block-list > li{position:relative;padding-left:1.4em}
+.article .entry-content ul.wp-block-list > li::before{content:"・";position:absolute;left:0;top:0;font-weight:700;color:#262626}
+
+/* 手順リスト（番号つき）をモノトーンに */
+.article .entry-content ol.steps{padding-left:0}
+.article .entry-content ol.steps li{padding:12px 16px 12px 52px;background:var(--muk-bg);border-radius:0}
+.article .entry-content ol.steps li + li{margin-top:8px}
+.article .entry-content ol.steps li::before{background:var(--muk-text);font-family:"Poppins",sans-serif;font-weight:500;top:13px}
+
+/* 表 */
+.article .entry-content .wp-block-table{margin:30px 0}
+.article .entry-content thead{border-bottom:none}
+.article .entry-content table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}
+.article .entry-content th,
+.article .entry-content td{padding:12px 14px;border:1px solid var(--muk-line);background:#fff;color:var(--muk-text)}
+.article .entry-content th{background:var(--muk-bg);font-weight:700}
+.article .entry-content tr:nth-of-type(2n+1) td{background:#fff}
+
+/* 注記ボックス（memo-box）：参考ページの h5 ボックス相当 */
+.article .entry-content .memo-box{
+  margin:30px 0;padding:30px 40px;
+  background:var(--muk-bg);border:none;border-radius:0;
+}
+.article .entry-content .memo-box::before{content:none;display:none}
+.article .entry-content .memo-box p{font-size:14px;line-height:2.14}
+
+/* よくある質問 */
+.article .entry-content .bold-blue{color:var(--muk-text);font-weight:700}
+
+/* 記事カード（一覧・記事内リンク） */
+.article .entry-content .column-card{padding:24px 30px;border:1px solid var(--muk-line);border-radius:0;text-decoration:none}
+.article .entry-content .column-card:hover{border-color:var(--muk-text);box-shadow:none;opacity:.7}
+.article .entry-content .column-card-title{font-size:15px;letter-spacing:.02em;line-height:1.67}
+.article .entry-content .column-card-snippet{color:var(--muk-sub)}
+
+@media screen and (max-width:640px){
+  .article .entry-content p,
+  .article .entry-content ul.wp-block-list > li,
+  .article .entry-content ol.wp-block-list > li,
+  .article .entry-content .memo-box p{font-size:13px;line-height:1.95}
+  .article .entry-content h2{font-size:16px;margin:45px 0 20px}
+  .article .entry-content h3{font-size:14px;padding-left:24px;margin:40px 0 15px}
+  .article .entry-content h3::before{width:10px}
+  .article .entry-content .toc{padding:20px;margin:20px auto 40px}
+  .article .entry-content .toc-title{margin-bottom:20px;font-size:14px}
+  .article .entry-content .toc .toc-list > li{font-size:13px}
+  .article .entry-content .toc .toc-list > li + li{margin-top:10px}
+  .article .entry-content .memo-box{padding:5%}
+  .article .entry-content th,
+  .article .entry-content td{padding:10px;font-size:13px}
+  .article .entry-content .column-card{padding:5%}
+}
