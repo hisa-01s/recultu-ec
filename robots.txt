@@ -1,0 +1,12 @@
+User-agent: *
+# EC（WordPress / WooCommerce）の管理画面・購入手続き系はクロール対象外
+Disallow: /ec/wp-admin/
+Allow: /ec/wp-admin/admin-ajax.php
+Disallow: /ec/wp-login.php
+Disallow: /ec/cart/
+Disallow: /ec/checkout/
+Disallow: /ec/my-account/
+Disallow: /ec/*?add-to-cart=
+Disallow: /ec/*?s=
+
+Sitemap: https://re-cultu.com/sitemap.xml
