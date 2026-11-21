@@ -101,6 +101,14 @@
 </style>
 <link rel='stylesheet' id='cocoon-child-style-css' href='wp-content/themes/cocoon-child-master/style.css' media='all' />
 <link rel='stylesheet' id='cocoon-child-keyframes-css' href='wp-content/themes/cocoon-child-master/keyframes.css' media='all' />
+<style id="top-page-layout-css">
+/* TOPページのみ：メイン画像（スライダー）をヘッダー直下に寄せる */
+.front-top-page #content{margin-top:0}
+.front-top-page #main{padding-top:0}
+.front-top-page .article-header{display:none}
+.front-top-page .entry-content{margin-top:0}
+.front-top-page .entry-content > .wp-block-columns:first-child{margin-bottom:0}
+</style>
 <link rel="stylesheet" type="text/css" href="wp-content/plugins/smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider.min.css" media="all">
 <style data-related="n2-ss-2">div#n2-ss-2 .n2-ss-slider-1{display:grid;position:relative;}div#n2-ss-2 .n2-ss-slider-2{display:grid;position:relative;overflow:hidden;padding:0px 0px 0px 0px;border:0px solid RGBA(62,62,62,1);border-radius:0px;background-clip:padding-box;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;z-index:1;}div#n2-ss-2:not(.n2-ss-loaded) .n2-ss-slider-2{background-image:none !important;}div#n2-ss-2 .n2-ss-slider-3{display:grid;grid-template-areas:'cover';position:relative;overflow:hidden;z-index:10;}div#n2-ss-2 .n2-ss-slider-3 > *{grid-area:cover;}div#n2-ss-2 .n2-ss-slide-backgrounds,div#n2-ss-2 .n2-ss-slider-3 > .n2-ss-divider{position:relative;}div#n2-ss-2 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-2 .n2-ss-slide-backgrounds > *{overflow:hidden;}div#n2-ss-2 .n2-ss-slide-background{transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slider-4{place-self:center;position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-2 .n2-ss-slider-4 > *{grid-area:slide;}div#n2-ss-2.n2-ss-full-page--constrain-ratio .n2-ss-slider-4{height:auto;}div#n2-ss-2 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;z-index:20;-webkit-backface-visibility:hidden;transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slide{perspective:1500px;}div#n2-ss-2 .n2-ss-slide-active{z-index:21;}.n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .nextend-arrow{cursor:pointer;overflow:hidden;line-height:0 !important;z-index:18;-webkit-user-select:none;}div#n2-ss-2 .nextend-arrow img{position:relative;display:block;}div#n2-ss-2 .nextend-arrow img.n2-arrow-hover-img{display:none;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-hover-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-hover-img{display:inline;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-normal-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-normal-img{display:none;}div#n2-ss-2 .nextend-arrow-animated{overflow:hidden;}div#n2-ss-2 .nextend-arrow-animated > div{position:relative;}div#n2-ss-2 .nextend-arrow-animated .n2-active{position:absolute;}div#n2-ss-2 .nextend-arrow-animated-fade{transition:background 0.3s, opacity 0.4s;}div#n2-ss-2 .nextend-arrow-animated-horizontal > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-horizontal .n2-active{top:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal .n2-active{left:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal .n2-active{right:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(100%);}div#n2-ss-2 .nextend-arrow-animated-vertical > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-vertical .n2-active{left:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical .n2-active{top:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical .n2-active{bottom:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(100%);}div#n2-ss-2 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-2 .nextend-arrow img{width: 32px}@media (min-width: 1200px){div#n2-ss-2 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-2 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-2 [data-hide-mobileportrait="1"]{display: none !important;}div#n2-ss-2 .nextend-arrow img{width: 16px}}</style>
 <script>(function(){this._N2=this._N2||{_r:[],_d:[],r:function(){this._r.push(arguments)},d:function(){this._d.push(arguments)}}}).call(window);</script><script src="wp-content/plugins/smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/n2.min.js" defer async></script>
@@ -216,13 +224,7 @@ gtag("config", "GT-MK98M6B4");
     <!-- Navigation -->
 <nav id="navi" class="navi cf" aria-label="ヘッダーメニュー" itemscope itemtype="https://schema.org/SiteNavigationElement">
   <div id="navi-in" class="navi-in wrap cf">
-    <ul class="menu-top menu-header menu-pc"><li id="menu-item-562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-has-no-description"><a><div class="caption-wrap"><div class="item-label">飾り物・アクセサリ</div></div><div class="top-has-sub has-sub has-icon"><div class="fas fa-angle-down" aria-hidden="true"></div></div></a>
-<ul class="sub-menu">
-	<li id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-kazari menu-item-has-no-description"><a href="kazari/kanzashi/"><div class="caption-wrap"><div class="item-label">かんざし</div></div></a></li>
-	<li id="menu-item-585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-no-description"><a href="kazari/pirece/"><div class="caption-wrap"><div class="item-label">ピアス</div></div></a></li>
-</ul>
-</li>
-<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-no-description"><a href="https://re-cultu.com/ec/cart/"><div class="caption-wrap"><div class="item-label">お買い物カゴ</div></div></a></li>
+    <ul class="menu-top menu-header menu-pc"><li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-no-description"><a href="https://re-cultu.com/ec/cart/"><div class="caption-wrap"><div class="item-label">お買い物カゴ</div></div></a></li>
 <li id="menu-item-561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-no-description"><a href="https://re-cultu.com/ec/my-account/"><div class="caption-wrap"><div class="item-label">マイアカウント</div></div></a></li>
 </ul>      </div><!-- /#navi-in -->
 </nav>
@@ -275,10 +277,6 @@ gtag("config", "GT-MK98M6B4");
 
         
 
-        <div class="date-tags">
-
-  <span class="post-date"><span class="fas fa-history" aria-hidden="true"></span><span class="entry-date date published"><meta itemprop="datePublished" content="2025-12-31T12:45:40+09:00">2025.12.31</span></span><span class="post-update"><span class="fas fa-history" aria-hidden="true"></span><time class="entry-date date updated" datetime="2026-10-05T21:59:01+09:00" itemprop="dateModified">2026.10.05</time></span>
-  </div>
 
         
         
@@ -514,13 +512,7 @@ gtag("config", "GT-MK98M6B4");
     <label class="display-none" id="navi-menu-close" for="navi-menu-input"></label>
     <div id="navi-menu-content" class="navi-menu-content menu-content">
       <label class="navi-menu-close-button menu-close-button" for="navi-menu-input"><span class="fas fa-times" aria-hidden="true"></span></label>
-      <ul class="menu-drawer"><li id="menu-item-562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-562"><a>飾り物・アクセサリ</a>
-<ul class="sub-menu">
-	<li id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-kazari menu-item-563"><a href="kazari/kanzashi/">かんざし</a></li>
-	<li id="menu-item-585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-585"><a href="kazari/pirece/">ピアス</a></li>
-</ul>
-</li>
-<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-598"><a href="https://re-cultu.com/ec/cart/">お買い物カゴ</a></li>
+      <ul class="menu-drawer"><li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-598"><a href="https://re-cultu.com/ec/cart/">お買い物カゴ</a></li>
 <li id="menu-item-561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-561"><a href="https://re-cultu.com/ec/my-account/">マイアカウント</a></li>
 </ul>    </div>
   </li>
