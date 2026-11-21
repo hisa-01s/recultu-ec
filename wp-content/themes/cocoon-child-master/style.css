@@ -15,6 +15,11 @@ Version:    1.1.3
 ************************************/
 /*必要ならばここにコードを書く*/
 
+/* ヘッダーの高さを従来の70%に縮小（PC 260px→182px／スマホ 200px→140px） */
+.header div.header-in{min-height:140px}
+.logo-header .site-logo-image{height:86px;width:auto}
+#navi .navi-in > ul > li{height:42px}
+
 /************************************
 ** レスポンシブデザイン用のメディアクエリ
 ************************************/
@@ -26,6 +31,7 @@ Version:    1.1.3
 /*834px以下*/
 @media screen and (max-width: 834px){
   /*必要ならばここにコードを書く*/
+  .header div.header-in{min-height:140px}
 }
 
 /*480px以下*/
