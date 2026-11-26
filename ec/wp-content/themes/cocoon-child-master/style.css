@@ -16,6 +16,73 @@ Version:    1.1.3
 /*必要ならばここにコードを書く*/
 
 /************************************
+** ヘッダー・フッターの背景色を静的ページ（re-cultu.com）と同じにする
+** 静的ページ：Cocoon skin-fuwari-mirucha ＋ キーカラー #00afb2、文字は白
+** EC：skin-grayish-topfull の配色を上書きする
+************************************/
+:root{
+  --recultu-key-color:#00afb2;
+  --recultu-key-text:#fff;
+}
+
+/* ヘッダー（トップページ・下層ページ共通） */
+.skin-grayish .header-container,
+.skin-grayish:not(.front-top-page) .header-container,
+.skin-grayish .header-container .header,
+.skin-grayish #navi-in,
+.skin-grayish:not(.front-top-page) #navi-in,
+.skin-grayish .navi-in .sub-menu{
+  background-color:var(--recultu-key-color);
+}
+.skin-grayish .header-container .site-name-text,
+.skin-grayish .header-container .tagline,
+.skin-grayish :where(.navi-in) a,
+.skin-grayish .navi-in a .item-label,
+.skin-grayish .navi-in a [class*="fa"],
+.skin-grayish .navi-in .gnavi-search-menu-open,
+.skin-grayish .navi-in .gnavi-search-menu-open .menu-icon,
+.skin-grayish .navi-in .gnavi-search-menu-open .fas{
+  color:var(--recultu-key-text);
+}
+.skin-grayish .navi-in a:hover{background-color:rgba(255,255,255,.2)}
+
+/* トップページの全画面ヘッダー：スキンの白い半透明の膜とドット柄を外して、キーカラーをそのまま見せる */
+.skin-grayish.front-top-page .container .header-container .header .grayish_topmv_whovlay,
+.skin-grayish.front-top-page .container .header-container .header .grayish_topmv_dot{display:none}
+/* 「Scroll」の文字と矢印を白に */
+.skin-grayish.front-top-page .container .header-container .skinadd-topmv-scroll,
+.skin-grayish.front-top-page .container .header-container .skinadd-topmv-scroll .skinadd-topmv-scroll__txt{color:var(--recultu-key-text)}
+.skin-grayish.front-top-page .container .header-container .skinadd-topmv-scroll::before{border-color:var(--recultu-key-text)}
+
+/* フッター */
+.skin-grayish .footer{
+  background-color:var(--recultu-key-color);
+  color:var(--recultu-key-text);
+}
+.skin-grayish .footer a:not(.sns-button),
+.skin-grayish .footer .copyright,
+.skin-grayish .footer .site-name-text,
+.skin-grayish :where(.navi-footer-in) a{
+  color:var(--recultu-key-text);
+}
+.skin-grayish .footer a:not(.sns-button):hover{background-color:rgba(255,255,255,.2)}
+
+/* スマホ・タブレット（1023px以下）：スキンが透明にするヘッダーとモバイルヘッダーボタン */
+@media screen and (max-width:1023px){
+  .skin-grayish .header-container,
+  .skin-grayish:not(.front-top-page) .header-container,
+  .skin-grayish .mobile-header-menu-buttons.mobile-menu-buttons{
+    background-color:var(--recultu-key-color);
+  }
+  .skin-grayish .mobile-header-menu-buttons .menu-button,
+  .skin-grayish .mobile-header-menu-buttons .menu-caption,
+  .skin-grayish .mobile-header-menu-buttons .menu-icon,
+  .skin-grayish .mobile-header-menu-buttons .site-name-text{
+    color:var(--recultu-key-text);
+  }
+}
+
+/************************************
 ** レスポンシブデザイン用のメディアクエリ
 ************************************/
 /*1023px以下*/
