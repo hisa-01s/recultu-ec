@@ -1,0 +1,16 @@
+# ディレクトリにアクセスしたときは index.html を表示する
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# URL から index.html を取り除く（301 恒久リダイレクト）
+#   /index.html              → /
+#   /cloth/index.html        → /cloth/
+#   /cloth/index.html?a=1    → /cloth/?a=1（クエリ文字列はそのまま引き継ぐ）
+# THE_REQUEST でブラウザから直接リクエストされた場合だけに絞り、
+# DirectoryIndex による内部処理ではリダイレクトしない（無限ループ防止）。
+# /ec/ は ec/.htaccess（WordPress）が独自に RewriteEngine を持つため、このルールは適用されない。
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s/(?:[^?\s]*/)?index\.html(?:[?\s]) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NC]
+</IfModule>
