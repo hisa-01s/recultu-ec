@@ -81,6 +81,20 @@
   background-color:currentColor;border:none;
 }
 
+/* h4：装飾なしの太字（テーマのアクセント色の上下線を消す） */
+.article .entry-content h4{
+  margin:30px 0 15px;padding:0;
+  background:none;border:none;border-radius:0;
+  color:var(--muk-text);font-size:15px;font-weight:700;letter-spacing:.06em;line-height:1.6;
+}
+.article .entry-content h4::before,.article .entry-content h4::after{content:none}
+
+/* 区切り線・画像キャプション */
+.article .entry-content hr,
+.article .entry-content .wp-block-separator{margin:40px 0;border:none;border-top:1px solid var(--muk-line);height:0;background:none;opacity:1}
+.article .entry-content figcaption,
+.article .entry-content .wp-element-caption{font-size:12px;color:var(--muk-sub);text-align:center;margin-top:8px}
+
 /* 目次：グレー地＋黒いピル型タイトル＋チェックアイコン */
 .article .entry-content .toc{
   display:block;width:auto;max-width:1000px;margin:40px auto 60px;padding:40px;
@@ -99,6 +113,15 @@
 .article .entry-content .toc .toc-list > li{margin:0;padding:0;list-style:none}
 .article .entry-content .toc .toc-list > li::before{content:none}
 .article .entry-content .toc .toc-list > li + li{margin-top:15px}
+/* 2階層目（h3）の目次：番号を消し、少し字下げして小さめに */
+.article .entry-content .toc .toc-list ol,
+.article .entry-content .toc .toc-list ul{margin:10px 0 0;padding:0 0 0 1.5em;list-style:none}
+.article .entry-content .toc .toc-list ol > li,
+.article .entry-content .toc .toc-list ul > li{margin:0;list-style:none;font-size:.93em}
+.article .entry-content .toc .toc-list ol > li + li,
+.article .entry-content .toc .toc-list ul > li + li{margin-top:8px}
+.article .entry-content .toc .toc-list ol a,
+.article .entry-content .toc .toc-list ul a{font-weight:500}
 .article .entry-content .toc a{
   display:inline-block;padding-left:1.5em;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.226 9.043'%3E%3Cpath d='M4.204 9.043 0 4.843l1.414-1.414 2.724 2.723L9.749.004l1.477 1.348Z' fill='%231a1a1a'/%3E%3C/svg%3E") 0 center/11px auto no-repeat;
@@ -157,6 +180,7 @@
   .article .entry-content h2{font-size:16px;margin:45px 0 20px}
   .article .entry-content h3{font-size:14px;padding-left:24px;margin:40px 0 15px}
   .article .entry-content h3::before{width:10px}
+  .article .entry-content h4{font-size:14px;margin:25px 0 10px}
   .article .entry-content .toc{padding:20px;margin:20px auto 40px}
   .article .entry-content .toc-title{margin-bottom:20px;font-size:14px}
   .article .entry-content .toc .toc-list > li{font-size:13px}
